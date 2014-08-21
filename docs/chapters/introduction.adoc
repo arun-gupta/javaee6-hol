@@ -1,0 +1,40 @@
+:imagesdir: ../images
+
+== Introduction
+
+The Java EE 6 platform allows you to write enterprise and web applications using much lesser code from its earlier versions. It breaks the “one size fits all” approach with Profiles and improves on the Java EE 5 developer productivity features tremendously. Several specifications like Enterprise JavaBeans 3.1, JavaServer Faces 2.0, Java API for RESTful Web Services 1.1, Java Persistence API 2.0, Servlet 3.0, Contexts and Dependency Injection 1.0, and Bean Validation 1.0 make the platform more powerful by adding new functionality and yet keeping it simple to use. NetBeans, Eclipse, and IntelliJ provide extensive tooling for Java EE 6. 
+
+This hands-on lab will build a typical 3-tier end-to-end Web application using Java EE 6 technologies including JPA2, JSF2, EJB 3.1, JAX-RS 1.1, Servlet 3, CDI 1.0, and Bean Validation 1.0. The application is developed using NetBeans 7 and deployed on GlassFish 3.1.1. 
+
+The latest version of this document can be downloaded from https://github.com/javaee-samples/javaee6-hol/blob/master/docs/asciidoc/javaee6-hol.html[javaee6-hol.html]. Please file issues or send pull requests for any updates.
+
+=== Software Requirement
+
+The following software needs to be downloaded and installed:
+
+* JDK 6 or 7 from
+http://www.oracle.com/technetwork/java/javase/downloads/index.html[http://www.oracle.com/technetwork/java/javase/downloads/index.html].
+* *Application Server*: This lab can use JBoss EAP or GlassFish 3 as the application server.
+* *IDE*: NetBeans 8.0 can be used. This document provides instructions for
+ifdef::ide-netbeans[]
+NetBeans 8.
++
+Download ``All'' or ``Java EE'' version from
+http://netbeans.org/downloads/[http://netbeans.org/downloads/]. A
+snapshot of the downloads page is shown and highlights the exact
+`Download' button to be clicked.
++
+.NetBeans download
+image::1.1-netbeans-download.png[]
+endif::ide-netbeans[]
++
+ifdef::server-glassfish[]
+GlassFish 4 comes pre-bundled with NetBeans 7.4+ and does not need to be downloaded explicitly. But if you want to download GlassFish 4 then can do so from http://glassfish.org/[glassfish.org].
++
+TIP: If you have downloaded GlassFish 4 separately or using a pre-installed version of GlassFish 4, then configure it in NetBeans IDE following the instructions in <<appendix-glassfish4-netbeans>>.
++
+TIP: <<appendix-glassfish4-idea>> explains how to configure GlassFish in IntelliJ IDEA.
+endif::server-glassfish[]
+ifdef::server-jboss[]
+JBoss EAP can be downloaded from http://www.jboss.org/products/eap/overview/[jboss.org] and configured in NetBeans IDE following the instructions in <<appendix-wildfly-netbeans>>.
+endif::server-jboss[]
